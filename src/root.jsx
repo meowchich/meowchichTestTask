@@ -11,7 +11,7 @@ export default class Root extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <div>
+        <div className="main-nav">
           Navbar:
           <ul>
             <li>

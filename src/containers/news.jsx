@@ -10,7 +10,7 @@ class News extends React.Component {
     const { news } = this.props;
 
     return news.map(post => (
-      <div key={post.id}>
+      <div key={post.id} className="news-wrap">
         <h3>{post.title}</h3>
         <p>{post.data}</p>
       </div>

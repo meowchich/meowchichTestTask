@@ -11,3 +11,80 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+div#root {
+  padding: 15px;
+}
+
+div#root > div.main-nav {
+  background: #f5f5f5;
+  padding: 15px;
+}
+
+div#root > div:not(.main-nav) {
+  padding: 30px;
+  background: #ccc;
+}
+
+.main-nav {
+  background: #f5f5f5;
+  padding: 15px;
+}
+
+div#root > div.main-nav ul {
+  list-style: none;
+  margin: 15px 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+div#root > div.main-nav ul a {
+  text-decoration: none;
+  padding: 5px 10px 7px;
+  border-radius: 5px;
+  position: relative;
+}
+
+div#root > div.main-nav ul a.active {
+  background: #ccc;
+}
+
+div#root > div:not(.main-nav) .news-wrap {
+  margin: 15px 0;
+  background: #f5f5f5;
+  padding: 15px;
+  transition: background 250ms;
+}
+
+div#root > div:not(.main-nav) .news-wrap h3, div#root > div:not(.main-nav) .news-wrap p {
+  margin: 0;
+}
+
+div#root > div:not(.main-nav) .news-wrap:first-child {
+  margin-top: 30px;
+}
+
+div#root > div:not(.main-nav) .news-wrap:last-child {
+  margin-bottom: 30px;
+}
+
+div#root > div:not(.main-nav) .news-wrap:hover {
+  background: #eee;
+}
+
+div#root > div.main-nav ul a:not(.active):after {
+  content: '';
+  display: block;
+  position: absolute;
+  background: #ccc;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  transition: width 250ms;
+}
+
+div#root > div.main-nav ul a:not(.active):hover:after {
+  width: 100%;
+}
