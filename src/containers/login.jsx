@@ -7,6 +7,8 @@ const mapDispatchToProps = (dispatch) => ({
 })
 
 class Login extends React.Component {
+
+
   constructor(props) {
     super(props);
 
@@ -19,9 +21,11 @@ class Login extends React.Component {
     const { login, history } = this.props;
     const { username, password } = this;
 
-    if (username.current.value && password.current.value) {
+    if ((username.current.value && username.current.value === 'Admin') && (password.current.value && password.current.value === '12345')) {
       login(username.current.value);
       history.push('/profile');
+    } else {
+      alert('Invalid');
     }
   }
 
